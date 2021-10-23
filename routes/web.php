@@ -20,3 +20,5 @@ Route::get('/library', function () {
 Route::get('/question', function () {
     return view('question');
 })->name('question');
+
+Route::get('/news_page/{id}', [NewsController::class, 'show'])->name('news_page');

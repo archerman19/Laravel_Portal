@@ -15,7 +15,7 @@ class NewsController extends BaseController
      */
     public function index()
     {
-		$data = News::all();
+		$data = News::all()->sortByDesc('created_at');
 		return view('news', compact('data', 'data'));
     }
 
@@ -48,7 +48,7 @@ class NewsController extends BaseController
      */
     public function show($id)
     {
-        //
+		return view('news_page', ['data' => News::find($id)]);
     }
 
     /**

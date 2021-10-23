@@ -5,10 +5,13 @@
 @endsection
 
 @section('content')
-	<h1>News</h1>
+	<h2>Новости</h2>
+
 	@foreach($data as $el)
 		<div class="alert">
-			<h3>{{ $el->title }}</h3>
+			<a class="fw-bold h4" href="{{ route('news_page', $el->id) }}">{{ $el->title }}<a>
+			<p class="text-muted">{{$el->preview}}</p>
+			<small>{{$el->created_at}}</small>
 		</div>
 	@endforeach
 @endsection
