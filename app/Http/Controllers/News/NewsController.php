@@ -4,6 +4,7 @@ namespace App\Http\Controllers\News;
 
 use App\Http\Controllers\Blog\BaseController;
 use Illuminate\Http\Request;
+use App\Models\News;
 
 class NewsController extends BaseController
 {
@@ -14,7 +15,8 @@ class NewsController extends BaseController
      */
     public function index()
     {
-        $items = BlogPost::all();
+		$data = News::all();
+		return view('news', compact('data', 'data'));
     }
 
     /**
