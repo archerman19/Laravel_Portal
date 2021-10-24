@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\News;
 
 use App\Http\Controllers\Blog\BaseController;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Models\News;
 
@@ -48,7 +49,9 @@ class NewsController extends BaseController
      */
     public function show($id)
     {
-		return view('news_page', ['data' => News::find($id)]);
+		$newsModel = News::find($id);
+		$comments = $newsModel->comments()->where('status', 1)->get();
+		return view('news_page', ['data' => $newsModel, 'comments' => $comments]);
     }
 
     /**

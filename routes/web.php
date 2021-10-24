@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\News\NewsController;
+use App\Http\Controllers\News\CommentController;
 
 Route::get('/', function () {
     return view('home');
@@ -22,6 +23,8 @@ Route::get('/question', function () {
 })->name('question');
 
 Route::get('/news_page/{id}', [NewsController::class, 'show'])->name('news_page');
+
+Route::post('/comment', [CommentController::class, 'addComment'])->name('comment');
 
 Auth::routes();
 

@@ -15,7 +15,7 @@ class NewsController extends AdminController
      *
      * @var string
      */
-    protected $title = 'User';
+    protected $title = 'News';
 
     /**
      * Make a grid builder.
