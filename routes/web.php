@@ -26,3 +26,7 @@ Route::get('/news_page/{id}', [NewsController::class, 'show'])->name('news_page'
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
