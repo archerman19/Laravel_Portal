@@ -5,7 +5,8 @@
 @endsection
 
 @section('content')
-	<h2>Новости</h2>
+
+	<h2 class="article-features">Новости</h2>
 
 	@foreach($data as $el)
 		<div class="alert">

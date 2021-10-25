@@ -10943,4 +10943,67 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.hero{
+	display: flex;
+	justify-content: center;
+}
+.title{
+	margin: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
+.subtitle{
+	color: #f9fbfc;
+	align-self: center;
+	font-size: 22px;
+}
+
+.info{
+	align-self: center;
+	font-size: 24px;
+	font-weight: bold;
+	color: #f9fbfc;
+}
+
+.features{
+	display: flex;
+	justify-content: space-around;
+}
+
+.feature-items{
+
+}
+
+a{
+	color: #000 !important;
+ 	text-decoration: none
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: url("https://myadventuresininclusion.com/wp-content/uploads/2020/01/iStock-1034861128-2048x1365.jpg") 100% no-repeat;
+	height: 500px;
+}
+.article{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.article-img{
+	align-self: center;
+}
+
+.article-features{
+	padding-top: 20px;
+}
+
+.article-preview{
+	padding-top: 15px;
+}
