@@ -1,19 +1,11 @@
-
 @extends('layouts.v_main')
 
 @section('title')
-	Главная
+	Категории
 @endsection
 
 @section('content')
-<main>
-	<div class="hero">
-		<div class="title">
-			<p class="subtitle">образовательный портал</p>
-			<p class="info">бесплатный онлайн сервис для образования</p>
-		</div>
-	</div>
-	<div class="features">
+<div class="features categories">
 		<div class="feature-items">
 			<a href="{{route('develop')}}" class="subtitle">Разработка</a>
 		</div>
@@ -27,5 +19,4 @@
 			<a href="{{route('design')}}" class="subtitle">Дизайн</a>
 		</div>
 	</div>
-</main>
 @endsection

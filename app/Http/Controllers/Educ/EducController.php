@@ -19,6 +19,52 @@ class EducController extends Controller
 		return view('education', compact('data', 'data'));
     }
 
+	/**
+	 * Show articles which have develop category
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function showDevelopArticles()
+    {
+        $data = Educ::all()->sortByDesc('created_at')->where('category_id', 1);
+		return view('develop', compact('data', 'data'));
+    }
+
+	/**
+	 * Show articles which have develop category
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function showAdministrationArticles()
+    {
+        $data = Educ::all()->sortByDesc('created_at')->where('category_id', 2);
+		return view('develop', compact('data', 'data'));
+    }
+
+	/**
+	 * Show articles which have develop category
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function showMarketingArticles()
+    {
+        $data = Educ::all()->sortByDesc('created_at')->where('category_id', 3);
+		return view('develop', compact('data', 'data'));
+    }
+
+	/**
+	 * Show articles which have develop category
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function showDesignArticles()
+    {
+        $data = Educ::all()->sortByDesc('created_at')->where('category_id', 4);
+		return view('develop', compact('data', 'data'));
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *

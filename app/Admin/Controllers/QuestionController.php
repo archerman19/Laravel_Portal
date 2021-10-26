@@ -2,13 +2,13 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Comment;
+use App\Models\Question;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class CommentController extends AdminController {
+class QuestionController extends AdminController {
 	/**
      * Title for current resource.
      *
@@ -23,13 +23,13 @@ class CommentController extends AdminController {
      */
     protected function grid()
     {
-        $grid = new Grid(new Comment());
+        $grid = new Grid(new Question());
 		
         $grid->column('id', __('Id'));
-		$grid->column('news_id', __('News'));
-        $grid->column('user_id', __('User id'));
-        $grid->column('comment_text', __('comment_text'));
-		$grid->column('status', __('Status'));
+		$grid->column('name', __('Name'));
+        $grid->column('email', __('Email'));
+        $grid->column('phone', __('Phone'));
+		$grid->column('text', __('Text'))->limit(100);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -43,16 +43,16 @@ class CommentController extends AdminController {
      */
     protected function detail($id)
     {
-        $show = new Show(Comment::findOrFail($id));
+        $show = new Show(Question::findOrFail($id));
 
 
         $show->field('id', __('Id'));
-        $show->field('news_id', __('News'));
-        $show->field('user_id', __('User id'));
-		$show->field('comment_text', __('comment_text'));
+        $show->field('name', __('Name'));
+        $show->field('email', __('Email'));
+		$show->field('phone', __('Phone'));
+        $show->field('text', __('Text'));
         $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
-		$show->field('status', __('Status'));
+		$show->field('updated_at', __('Updated at'));
 
         return $show;
     }
@@ -64,12 +64,12 @@ class CommentController extends AdminController {
      */
     protected function form()
     {
-        $form = new Form(new Comment());
+        $form = new Form(new Question());
 
-		$form->text('news_id', __('News'));
-        $form->text('user_id', __('User id'));
-		$form->text('comment_text', __('comment_text'));
-		$form->text('status', __('Status'));
+		$form->text('name', __('Name'));
+        $form->text('email', __('Email'));
+		$form->text('phone', __('Phone'));
+		$form->text('text', __('Text'));
 		
 
         return $form;

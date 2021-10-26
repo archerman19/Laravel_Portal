@@ -12,7 +12,7 @@
                     <ul class="navbar-nav mr-auto">
 						<li><a href="{{ route('news') }}" class="nav-link px-2 link-dark">Новости</a></li>
 						<li><a href="{{ route('education') }}" class="nav-link px-2 link-dark">Образование</a></li>
-						<li><a href="{{ route('library') }}" class="nav-link px-2 link-dark">Научная библиотека</a></li>
+						<li><a href="{{ route('categories') }}" class="nav-link px-2 link-dark">Категории</a></li>
 						<li><a href="{{ route('question') }}" class="nav-link px-2 link-dark">Задать вопрос</a></li>
                     </ul>
 

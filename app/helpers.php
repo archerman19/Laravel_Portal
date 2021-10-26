@@ -9,4 +9,12 @@ class Helpers {
 		}
 		return $userModel;
 	}
+
+	public static function  _category($categoryId) {
+		$categoryModel = App\Models\Category::find($categoryId);
+		if (!$categoryModel) {
+			return abort(404);
+		}
+		return $categoryModel;
+	}
 }

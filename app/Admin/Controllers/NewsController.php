@@ -27,9 +27,9 @@ class NewsController extends AdminController
         $grid = new Grid(new News());
 
         $grid->column('id', __('Id'));
-        $grid->column('title', __('Title'));
-        $grid->column('preview', __('Preview'));
-		$grid->column('content', __('Content'));
+        $grid->column('title', __('Title'))->limit(100);
+        $grid->column('preview', __('Preview'))->limit(100);
+		$grid->column('content', __('Content'))->limit(100);
 		$grid->column('is_active', __('Is_active'));
 		$grid->column('published_at', __('Published_at'));
         $grid->column('created_at', __('Created at'));

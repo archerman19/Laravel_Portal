@@ -26,13 +26,13 @@ class EducController extends AdminController
     {
         $grid = new Grid(new Educ());
 
-        $grid->column('id', __('Id'));
-        $grid->column('title', __('Title'));
-        $grid->column('preview', __('Preview'));
-		$grid->column('content', __('Content'));
-		$grid->column('category', __('Category'));
-		$grid->column('image', __('Image'));
-		$grid->column('author', __('Author'));
+        $grid->column('id', __('Id'))->limit(100);
+        $grid->column('title', __('Title'))->limit(100);
+        $grid->column('preview', __('Preview'))->limit(100);
+		$grid->column('content', __('Content'))->limit(100);
+		$grid->column('category_id', __('Category'))->limit(100);
+		$grid->column('image', __('Image'))->limit(100);
+		$grid->column('author', __('Author'))->limit(100);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -57,7 +57,7 @@ class EducController extends AdminController
         $show->field('author', __('Author'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
-		$show->field('category', __('Category'));
+		$show->field('category_id', __('Category'));
 
         return $show;
     }
@@ -76,7 +76,7 @@ class EducController extends AdminController
 		$form->text('content', __('Content'));
         $form->text('image', __('Image'));
         $form->text('author', __('Author'));
-		$form->text('category', __('Category'));
+		$form->text('category_id', __('Category'));
 
         return $form;
     }
