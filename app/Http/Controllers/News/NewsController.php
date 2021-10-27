@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\News;
 
 use App\Http\Controllers\Blog\BaseController;
-use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Models\News;
 

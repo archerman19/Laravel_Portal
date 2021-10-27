@@ -31,7 +31,7 @@ class EducController extends Controller
     }
 
 	/**
-	 * Show articles which have develop category
+	 * Show articles which have administration category
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -42,7 +42,7 @@ class EducController extends Controller
     }
 
 	/**
-	 * Show articles which have develop category
+	 * Show articles which have marketing category
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -53,7 +53,7 @@ class EducController extends Controller
     }
 
 	/**
-	 * Show articles which have develop category
+	 * Show articles which have design category
 	 *
 	 * @return \Illuminate\Http\Response
 	 */

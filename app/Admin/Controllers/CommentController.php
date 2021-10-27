@@ -24,12 +24,12 @@ class CommentController extends AdminController {
     protected function grid()
     {
         $grid = new Grid(new Comment());
-		
+		$grid->model()->orderBy('id', 'desc');
         $grid->column('id', __('Id'));
 		$grid->column('news_id', __('News'));
         $grid->column('user_id', __('User id'));
         $grid->column('comment_text', __('comment_text'));
-		$grid->column('status', __('Status'));
+		$grid->column('status', __('Status'))->bool();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 

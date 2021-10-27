@@ -31,6 +31,11 @@ class QuestionRequest extends FormRequest
         ];
     }
 
+	/**
+	 * Set error messages 
+	 *
+	 * @return array
+	 */
 	 public function messages()
 	 {
 	 	return [
