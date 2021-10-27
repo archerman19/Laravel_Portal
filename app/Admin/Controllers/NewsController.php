@@ -25,12 +25,13 @@ class NewsController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new News());
+		$grid->model()->orderBy('id', 'desc');
 
         $grid->column('id', __('Id'));
         $grid->column('title', __('Title'))->limit(100);
         $grid->column('preview', __('Preview'))->limit(100);
 		$grid->column('content', __('Content'))->limit(100);
-		$grid->column('is_active', __('Is_active'));
+		$grid->column('is_active', __('Is_active'))->bool();
 		$grid->column('published_at', __('Published_at'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));

@@ -24,6 +24,7 @@ class QuestionController extends AdminController {
     protected function grid()
     {
         $grid = new Grid(new Question());
+		$grid->model()->orderBy('id', 'desc');
 		
         $grid->column('id', __('Id'));
 		$grid->column('name', __('Name'));
@@ -32,6 +33,7 @@ class QuestionController extends AdminController {
 		$grid->column('text', __('Text'))->limit(100);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
+		$grid->column('status', __('Status'))->bool();
 
         return $grid;
     }
@@ -53,6 +55,7 @@ class QuestionController extends AdminController {
         $show->field('text', __('Text'));
         $show->field('created_at', __('Created at'));
 		$show->field('updated_at', __('Updated at'));
+		$show->field('status', __('Status'));
 
         return $show;
     }

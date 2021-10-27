@@ -25,6 +25,7 @@ class EducController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Educ());
+		$grid->model()->orderBy('id', 'desc');
 
         $grid->column('id', __('Id'))->limit(100);
         $grid->column('title', __('Title'))->limit(100);
