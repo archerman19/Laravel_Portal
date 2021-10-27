@@ -19,12 +19,4 @@ Route::group([
 	$router->resource('educ', EducController::class);
 	$router->resource('questions', QuestionController::class);
 
-	// $router->resource('comment', 'CommentController', ['except' => ['create', 'store']]);
-    // // доп.маршрут, чтобы разрешить публикацию комментария
-    // $router->get('comment/enable/{comment}', 'CommentController@enable')
-    //     ->name('comment.enable');
-    // // доп.маршрут, чтобы запретить публикацию комментария
-    // $router->get('comment/disable/{comment}', 'CommentController@disable')
-    //     ->name('comment.disable');
-
 });

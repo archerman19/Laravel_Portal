@@ -1,4 +1,13 @@
 @auth
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form method="post" action="{{ route('comment') }}" class="form-group">
 	@csrf
     <label for="exampleFormControlTextarea1">Ваш комментарий</label>

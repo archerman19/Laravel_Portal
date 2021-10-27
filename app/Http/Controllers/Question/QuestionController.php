@@ -6,10 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\Question;
 use App\Http\Requests\QuestionRequest;
 
-class QuestionController extends Controller
-{
-    public function addQuestion(QuestionRequest $request)
-	{
+class QuestionController extends Controller {
+	/**
+	 * Передать значения инпутов в модель для записи в бд
+	 *
+	 * @param QuestionRequest $request
+	 * @return void
+	 */
+    public function addQuestion(QuestionRequest $request) {
 		$name = $request->input('question-name');
 		$email = $request->input('question-email');
 		$phone = $request->input('question-phone');
