@@ -15,7 +15,12 @@
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^2.4"
+        "laravel/ui": "^2.4",
+		"doctrine/orm": "^2.11.0",
+        "doctrine/dbal": "^3.2",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4",
+		"doctrine/annotations": "1.14"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -40,7 +45,8 @@
         },
         "classmap": [
             "database/seeds",
-            "database/factories"
+            "database/factories",
+			"src"
         ]
     },
     "autoload-dev": {
